@@ -1,0 +1,50 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 05, 2022 at 07:03 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `images`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `imagedata`
+--
+-- Creation: Feb 05, 2022 at 05:33 AM
+-- Last update: Feb 05, 2022 at 05:56 AM
+--
+
+DROP TABLE IF EXISTS `imagedata`;
+CREATE TABLE IF NOT EXISTS `imagedata` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `dir` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `imagedata`:
+--
+
+--
+-- Truncate table before insert `imagedata`
+--
+
+TRUNCATE TABLE `imagedata`;
+--
+-- Dumping data for table `imagedata`
+--
+
+INSERT INTO `imagedata` (`id`, `name`, `dir`) VALUES(1, '61fe0d40a1d144.71207004.jpg', 'images/61fe0d40a1d144.71207004.jpg');
+INSERT INTO `imagedata` (`id`, `name`, `dir`) VALUES(2, '61fe11a9474750.41182709.jpg', 'images/61fe11a9474750.41182709.jpg');
+COMMIT;

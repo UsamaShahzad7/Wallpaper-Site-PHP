@@ -1,0 +1,91 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 04, 2022 at 03:33 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `walle`
+--
+CREATE DATABASE IF NOT EXISTS `walle` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `walle`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
+  `name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Truncate table before insert `message`
+--
+
+TRUNCATE TABLE `message`;
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`name`, `email`, `message`) VALUES
+('Usama Shahzad', 'mughalosama618@gmail.com', 'Hi There I really Like Your Site');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mytable`
+--
+
+DROP TABLE IF EXISTS `mytable`;
+CREATE TABLE `mytable` (
+  `id` int(11) NOT NULL,
+  `userID` varchar(50) NOT NULL,
+  `eMail` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Truncate table before insert `mytable`
+--
+
+TRUNCATE TABLE `mytable`;
+--
+-- Dumping data for table `mytable`
+--
+
+INSERT INTO `mytable` (`id`, `userID`, `eMail`, `password`) VALUES
+(1, 'UsamaShahzad247', 'mughalosama618@gmail.com', 'UsamaShahzad'),
+(2, 'UmerMujtaba123', 'mujtabaumer22@gmail.com', 'Usama');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `mytable`
+--
+ALTER TABLE `mytable`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mytable`
+--
+ALTER TABLE `mytable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
